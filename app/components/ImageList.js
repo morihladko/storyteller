@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import ImageListItem from './ImageListItem';
 
 class ImageList extends Component {
@@ -9,7 +11,7 @@ class ImageList extends Component {
     render() {
         return (
             <ul>
-                {this.props.images.map(() => <ImageListItem />)}
+                {this.props.images.map((image) => <ImageListItem image={image}/>)}
             </ul>
         );
     }
